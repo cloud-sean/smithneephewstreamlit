@@ -22,7 +22,7 @@ def main():
     client.beta.assistants.update(
         assistant_id=assistant.id,
         tool_resources={"file_search": {"vector_store_ids": [vector_store.id]}},
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
     )
     if st.button('Submit'):
         if user_input:
