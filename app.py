@@ -18,7 +18,7 @@ vector_store = client.beta.vector_stores.retrieve("vs_Rvf0rhHU795hFWv7HcRl3Hcj")
 def main():
     st.title('Smith & Nephew Question Answering App')
     user_input = st.text_input('Enter your question:', '')
-    model_version = st.selectbox('Select the model version:', ['gpt-3.5-turbo', 'gpt-4-turbo'])
+    model_version = st.selectbox('Select the model version:', ['gpt-4o', 'gpt-4-turbo'])
     client.beta.assistants.update(
         assistant_id=assistant.id,
         tool_resources={"file_search": {"vector_store_ids": [vector_store.id]}},
